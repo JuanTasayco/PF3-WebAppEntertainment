@@ -17,7 +17,8 @@ app.get("*", (requ, resp) => {
 })
 
 dbConnection();
-app.listen(process.env.BBDD_PORT, () => {
+var port_number = server.listen(process.env.BBDD_PORT || 4000)
+app.listen(port_number , () => {
     console.log(`El servidor está activo en el puerto ${process.env.BBDD_PORT}`)
 })
 

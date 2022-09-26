@@ -21,6 +21,6 @@ router.post("/", [
 ], login)
 
 
-router.get("/", validarJWT ,validarToken)
+router.get("/", validarJWT, validarToken)
 
 module.exports = router
